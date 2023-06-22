@@ -51,8 +51,10 @@
 		0CE4EEF02A44AA7100629C89 /* City sight App */ = {
 			isa = PBXGroup;
 			children = (
+				0CE4EF012A44AAA200629C89 /* Views */,
+				0CE4EF002A44AA8F00629C89 /* ViewModel */,
+				0CE4EEFF2A44AA7B00629C89 /* Model */,
 				0CE4EEF12A44AA7100629C89 /* City_sight_AppApp.swift */,
-				0CE4EEF32A44AA7100629C89 /* ContentView.swift */,
 				0CE4EEF52A44AA7400629C89 /* Assets.xcassets */,
 				0CE4EEF72A44AA7400629C89 /* Preview Content */,
 			);
@@ -65,6 +67,28 @@
 				0CE4EEF82A44AA7400629C89 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0CE4EEFF2A44AA7B00629C89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0CE4EF002A44AA8F00629C89 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0CE4EF012A44AAA200629C89 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0CE4EEF32A44AA7100629C89 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
