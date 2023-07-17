@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CE4EEF22A44AA7100629C89 /* City_sight_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4EEF12A44AA7100629C89 /* City_sight_AppApp.swift */; };
-		0CE4EEF42A44AA7100629C89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4EEF32A44AA7100629C89 /* ContentView.swift */; };
+		0CE4EEF22A44AA7100629C89 /* CitysightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4EEF12A44AA7100629C89 /* CitysightApp.swift */; };
+		0CE4EEF42A44AA7100629C89 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4EEF32A44AA7100629C89 /* LaunchView.swift */; };
 		0CE4EEF62A44AA7400629C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4EEF52A44AA7400629C89 /* Assets.xcassets */; };
 		0CE4EEF92A44AA7400629C89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4EEF82A44AA7400629C89 /* Preview Assets.xcassets */; };
+		0CE4EF082A44ADB300629C89 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4EF072A44ADB300629C89 /* ContentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0CE4EEEE2A44AA7100629C89 /* City sight App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City sight App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CE4EEF12A44AA7100629C89 /* City_sight_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City_sight_AppApp.swift; sourceTree = "<group>"; };
-		0CE4EEF32A44AA7100629C89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0CE4EEF12A44AA7100629C89 /* CitysightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitysightApp.swift; sourceTree = "<group>"; };
+		0CE4EEF32A44AA7100629C89 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		0CE4EEF52A44AA7400629C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CE4EEF82A44AA7400629C89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0CE4EF072A44ADB300629C89 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		0CE4EF092A458DE400629C89 /* City-sight-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "City-sight-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +54,11 @@
 		0CE4EEF02A44AA7100629C89 /* City sight App */ = {
 			isa = PBXGroup;
 			children = (
+				0CE4EF092A458DE400629C89 /* City-sight-App-Info.plist */,
 				0CE4EF012A44AAA200629C89 /* Views */,
 				0CE4EF002A44AA8F00629C89 /* ViewModel */,
 				0CE4EEFF2A44AA7B00629C89 /* Model */,
-				0CE4EEF12A44AA7100629C89 /* City_sight_AppApp.swift */,
+				0CE4EEF12A44AA7100629C89 /* CitysightApp.swift */,
 				0CE4EEF52A44AA7400629C89 /* Assets.xcassets */,
 				0CE4EEF72A44AA7400629C89 /* Preview Content */,
 			);
@@ -79,6 +83,7 @@
 		0CE4EF002A44AA8F00629C89 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0CE4EF072A44ADB300629C89 /* ContentModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -86,7 +91,7 @@
 		0CE4EF012A44AAA200629C89 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0CE4EEF32A44AA7100629C89 /* ContentView.swift */,
+				0CE4EEF32A44AA7100629C89 /* LaunchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,8 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CE4EEF42A44AA7100629C89 /* ContentView.swift in Sources */,
-				0CE4EEF22A44AA7100629C89 /* City_sight_AppApp.swift in Sources */,
+				0CE4EEF42A44AA7100629C89 /* LaunchView.swift in Sources */,
+				0CE4EEF22A44AA7100629C89 /* CitysightApp.swift in Sources */,
+				0CE4EF082A44ADB300629C89 /* ContentModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +299,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"City sight App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "City-sight-App-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Grant permission to find resturants and sights  near you ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -321,6 +329,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"City sight App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "City-sight-App-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Grant permission to find resturants and sights  near you ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
