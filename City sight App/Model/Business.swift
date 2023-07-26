@@ -7,12 +7,15 @@
 
 import Foundation
 
-struct Business: Decodable {
+class Business: Decodable, Identifiable, ObservableObject {
+    
+    @Published var ImageData: Data?
+    
     var id: String?
     var alias: String?
     var name: String?
-    var image_url: String?
-    var is_closed: Bool?
+    var imageUrl: String?
+    var isClosed: Bool?
     var categories: [Category]?
     var coordinates: Coordinate?
     var rating: Double?
@@ -21,9 +24,51 @@ struct Business: Decodable {
     var price: String?
     var location: Locations?
     var phone: String?
-    var display_phone: String?
-    var distance: String?
+    var displayPhone: String?
+    var distance: Double?
+    var reviewCount: Int?
     
+    enum CodingKeys: String, CodingKey {
+        case imageUrl = "image_url"
+        case isClosed = "is_closed"
+        case displayPhone = "display_phone"
+        case reviewCount = "review_count"
+
+        case id
+        case alias
+        case name
+        case categories
+        case coordinates
+        case rating
+        case transactions
+        case url
+        case price
+        case location
+        case phone
+        case distance
+    }
+    
+    func getImageData() {
+        guard imageUrl != nil else {
+            return
+        }
+        
+        if let url = URL(string: imageUrl!) {
+            
+            let session = URLSession.shared
+            let dataTask = session.dataTask(with: url) { data, response, error in
+                
+                if error == nil {
+                    
+                    DispatchQueue.main.async {
+                        self.ImageData = data!
+                    }
+                    
+                }
+            }
+            dataTask.resume()
+        }
+    }
 }
 
 struct Category: Decodable {
@@ -43,9 +88,22 @@ struct Locations: Decodable {
     var address2: String?
     var address3: String?
     var city: String?
-    var zip_code: String?
+    var zipCode: String?
     var country: String?
     var state: String?
-    var display_address: [String]?
+    var displayAddress: [String]?
+    
+    enum CodingKeys: String, CodingKey {
+        case zipCode = "zip_code"
+        case displayAddress = "display_address"
+
+
+        case address1
+        case address2
+        case address3
+        case city
+        case country
+        case state
+    }
 }
 

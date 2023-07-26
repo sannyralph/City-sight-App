@@ -6,14 +6,25 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct LaunchView: View {
+    
+    @EnvironmentObject var model: ContentModel
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+                
+            if model.authorizationState == .notDetermined {
+                
+            }
+            else if model.authorizationState == .authorizedAlways || model.authorizationState == .authorizedWhenInUse {
+                HomeView()
+            }
+            else {
+                
+            }
+                
         }
         .padding()
     }
