@@ -14,21 +14,27 @@ struct HomeView: View {
     
     var body: some View {
         if model.resturants.count != 0 || model.sights.count != 0 {
-            if !isMapShowing {
-                VStack(alignment: .leading) {
-                    HStack {
-                        Image(systemName: "location")
-                        Text("My location")
-                        Spacer()
-                        Text("Switch to map")
+            
+            NavigationView {
+                if !isMapShowing {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Image(systemName: "location")
+                            Text("My location")
+                            Spacer()
+                            Text("Switch to map")
+                        }
+                        Divider()
+                        BusinessList()
                     }
-                    Divider()
-                    BusinessList()
+                    .padding([.horizontal, .top] )
+                    .navigationBarHidden(true)
+                }
+                else {
+                    
                 }
             }
-            else {
-                
-            }
+          
                 
         }
         else {

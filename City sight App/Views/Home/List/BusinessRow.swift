@@ -18,8 +18,10 @@ struct BusinessRow: View {
                 
                 let uiImage = UIImage(data: business.ImageData ?? Data())
                 Image(uiImage: uiImage ?? UIImage())
+                    .resizable()
                     .frame(width: 58, height: 58)
                     .cornerRadius(5)
+                    .scaledToFit()
                 
                 VStack(alignment: .leading) {
                     Text(business.name ?? "")
@@ -34,6 +36,7 @@ struct BusinessRow: View {
                         .font(.caption)
                 }
             }
+            .foregroundColor(.black)
             Divider()
         }
     }
