@@ -26,7 +26,6 @@ struct LaunchView: View {
             }
                 
         }
-        .padding()
     }
 }
 

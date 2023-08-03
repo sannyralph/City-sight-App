@@ -13,7 +13,7 @@ struct BusinessDetails: View {
     var body: some View {
       
         VStack (alignment: .leading){
-            
+        
             VStack(alignment: .leading, spacing: 0) {
                 
                 GeometryReader() {geometry in
@@ -22,12 +22,11 @@ struct BusinessDetails: View {
                     Image(uiImage: uiImage ?? UIImage())
                         .resizable()
                         .scaledToFill()
-                        .frame(width: geometry.size .width, height: geometry.size.height)
+                        .frame(width: geometry.size.width, height: geometry.size.height)
                         .clipped()
-                    
+                       
                 }
                 .ignoresSafeArea(.all, edges: .top)
-               
                 
                 ZStack (alignment: .leading){
                     
@@ -41,6 +40,8 @@ struct BusinessDetails: View {
                         .padding(.leading)
                 }
             }
+            
+           
       
             Group {
                 
@@ -98,7 +99,7 @@ struct BusinessDetails: View {
                 ZStack{
                     Rectangle()
                         .frame(height: 48)
-                        .foregroundColor(.blue)
+                        .background(Color("Background"))
                         .cornerRadius(10)
                     
                     Text("Get Directtions")
@@ -107,8 +108,10 @@ struct BusinessDetails: View {
                 }
             }
             .padding()
+            
         }
-        
+        .frame(maxHeight: .infinity)
     }
+        
 }
 
