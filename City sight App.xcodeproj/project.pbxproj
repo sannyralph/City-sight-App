@@ -66,8 +66,9 @@
 		0C786D082A6AB024002E8C5F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0CF0E3222A7C13E1008AA5A7 /* Map */,
 				0C786D0D2A6AB219002E8C5F /* HomeView.swift */,
+				0CCCBB352A78AF6B0060C17B /* Details */,
+				0CF0E3222A7C13E1008AA5A7 /* Map */,
 				0CDB46FC2A6B24250041BF36 /* List */,
 			);
 			path = Home;
@@ -98,7 +99,6 @@
 		0CDB46FC2A6B24250041BF36 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				0CCCBB352A78AF6B0060C17B /* Details */,
 				0CDB46FD2A6B244D0041BF36 /* BusinessList.swift */,
 				0CDB47012A6B5D9D0041BF36 /* BusinessSectionHeader.swift */,
 				0CDB47032A6B61720041BF36 /* BusinessSection.swift */,

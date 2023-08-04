@@ -11,6 +11,7 @@ struct HomeView: View {
     
     @EnvironmentObject var model: ContentModel
     @State var isMapShowing = false
+    @State var selectedBusiness:Business?
     
     var body: some View {
         if model.resturants.count != 0 || model.sights.count != 0 {
@@ -35,8 +36,11 @@ struct HomeView: View {
                 }
                    
                 else {
-                    BusinessMap()
+                    BusinessMap(selectedBusiness: $selectedBusiness)
                         .ignoresSafeArea(.all)
+                        .sheet(item: $selectedBusiness) { business in
+                            BusinessDetails(business: business)
+                        }
                 }
             }
           
