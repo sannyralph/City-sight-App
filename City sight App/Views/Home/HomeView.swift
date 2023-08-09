@@ -28,34 +28,68 @@ struct HomeView: View {
                             }
                         }
                         Divider()
-                        BusinessList()
+                        ZStack(alignment: .top){
+                            BusinessList()
+                            
+                            HStack{
+                                Spacer()
+                                SportonLogo(link: "https://sanniabdulrafiu.netlify.app/")
+                            }
+                            .padding(.trailing, -20)
+                        }
+                        
                     }
                     .padding([.horizontal, .top] )
                     .navigationBarHidden(true)
                     
                 }
-                   
-                else {
-                    BusinessMap(selectedBusiness: $selectedBusiness)
-                        .ignoresSafeArea(.all)
-                        .sheet(item: $selectedBusiness) { business in
-                            BusinessDetails(business: business)
-                        }
-                }
-            }
-          
                 
+                else {
+                    
+                    ZStack(alignment: .top) {
+                        
+                        BusinessMap(selectedBusiness: $selectedBusiness)
+                            .ignoresSafeArea(.all)
+                            .sheet(item: $selectedBusiness) { business in
+                                BusinessDetails(business: business)
+                            }
+                        
+                        ZStack {
+                            
+                            Rectangle()
+                                .foregroundColor(.white)
+                                .cornerRadius(5)
+                                .frame(height: 48)
+                            
+                            HStack {
+                                Image(systemName: "location")
+                                Text("My location")
+                                Spacer()
+                                Button("Switch to list view") {
+                                    self.isMapShowing = false
+                                }
+                            }
+                            .padding()
+                            
+                        }
+                        .padding()
+                    }
+                    .navigationBarHidden(true)
+                }
+               
+                
+            }
+            
+//            else {
+//                ProgressView()
+//            }
+            
         }
-        else {
-            ProgressView()
-        }
-        
-       
     }
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
+    
+    struct HomeView_Previews: PreviewProvider {
+        static var previews: some View {
+            HomeView()
+        }
     }
 }

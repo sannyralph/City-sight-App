@@ -16,13 +16,13 @@ struct LaunchView: View {
         VStack {
                 
             if model.authorizationState == .notDetermined {
-                
+                OnbordingView()
             }
             else if model.authorizationState == .authorizedAlways || model.authorizationState == .authorizedWhenInUse {
                 HomeView()
             }
             else {
-                
+                LocationDeniedView()
             }
                 
         }

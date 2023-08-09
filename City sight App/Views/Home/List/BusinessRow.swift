@@ -37,7 +37,8 @@ struct BusinessRow: View {
                 }
             }
             .foregroundColor(.black)
-            Divider()
+            LineDivider()
+                .padding(.vertical)
         }
     }
 }

@@ -22,6 +22,13 @@
 		0CE4EEF92A44AA7400629C89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4EEF82A44AA7400629C89 /* Preview Assets.xcassets */; };
 		0CE4EF082A44ADB300629C89 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4EF072A44ADB300629C89 /* ContentModel.swift */; };
 		0CF0E3242A7C1411008AA5A7 /* BusinessMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0E3232A7C1411008AA5A7 /* BusinessMap.swift */; };
+		0CF0E3282A7D896E008AA5A7 /* DirectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0E3272A7D896E008AA5A7 /* DirectionsView.swift */; };
+		0CF0E32A2A7D8A51008AA5A7 /* BusinessTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0E3292A7D8A51008AA5A7 /* BusinessTitle.swift */; };
+		0CF0E32C2A7DAB82008AA5A7 /* DirectionsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0E32B2A7DAB81008AA5A7 /* DirectionsMap.swift */; };
+		0CF0E32E2A825C09008AA5A7 /* OnbordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0E32D2A825C09008AA5A7 /* OnbordingView.swift */; };
+		0CF0E3302A827555008AA5A7 /* LocationDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0E32F2A827555008AA5A7 /* LocationDeniedView.swift */; };
+		0CF0E3332A82B654008AA5A7 /* SportonLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0E3322A82B654008AA5A7 /* SportonLogo.swift */; };
+		0CF0E3352A82BA96008AA5A7 /* LineDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0E3342A82BA96008AA5A7 /* LineDivider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +49,13 @@
 		0CE4EF072A44ADB300629C89 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		0CE4EF092A458DE400629C89 /* City-sight-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "City-sight-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0CF0E3232A7C1411008AA5A7 /* BusinessMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMap.swift; sourceTree = "<group>"; };
+		0CF0E3272A7D896E008AA5A7 /* DirectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsView.swift; sourceTree = "<group>"; };
+		0CF0E3292A7D8A51008AA5A7 /* BusinessTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTitle.swift; sourceTree = "<group>"; };
+		0CF0E32B2A7DAB81008AA5A7 /* DirectionsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsMap.swift; sourceTree = "<group>"; };
+		0CF0E32D2A825C09008AA5A7 /* OnbordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbordingView.swift; sourceTree = "<group>"; };
+		0CF0E32F2A827555008AA5A7 /* LocationDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeniedView.swift; sourceTree = "<group>"; };
+		0CF0E3322A82B654008AA5A7 /* SportonLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportonLogo.swift; sourceTree = "<group>"; };
+		0CF0E3342A82BA96008AA5A7 /* LineDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDivider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,7 @@
 		0C786D092A6AB02D002E8C5F /* Denied */ = {
 			isa = PBXGroup;
 			children = (
+				0CF0E32F2A827555008AA5A7 /* LocationDeniedView.swift */,
 			);
 			path = Denied;
 			sourceTree = "<group>";
@@ -84,6 +99,7 @@
 		0C786D0A2A6AB053002E8C5F /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				0CF0E32D2A825C09008AA5A7 /* OnbordingView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -92,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				0CCCBB332A78A6350060C17B /* BusinessDetails.swift */,
+				0CF0E3272A7D896E008AA5A7 /* DirectionsView.swift */,
+				0CF0E3292A7D8A51008AA5A7 /* BusinessTitle.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -166,6 +184,7 @@
 		0CE4EF012A44AAA200629C89 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0CF0E3312A82B636008AA5A7 /* Common */,
 				0CE4EEF32A44AA7100629C89 /* LaunchView.swift */,
 				0C786D0A2A6AB053002E8C5F /* Onboarding */,
 				0C786D092A6AB02D002E8C5F /* Denied */,
@@ -178,8 +197,18 @@
 			isa = PBXGroup;
 			children = (
 				0CF0E3232A7C1411008AA5A7 /* BusinessMap.swift */,
+				0CF0E32B2A7DAB81008AA5A7 /* DirectionsMap.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		0CF0E3312A82B636008AA5A7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0CF0E3322A82B654008AA5A7 /* SportonLogo.swift */,
+				0CF0E3342A82BA96008AA5A7 /* LineDivider.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,16 +281,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CF0E32C2A7DAB82008AA5A7 /* DirectionsMap.swift in Sources */,
 				0CE4EEF42A44AA7100629C89 /* LaunchView.swift in Sources */,
 				0CDB470B2A6D1F870041BF36 /* BusinessRow.swift in Sources */,
+				0CF0E3282A7D896E008AA5A7 /* DirectionsView.swift in Sources */,
 				0C786D0E2A6AB219002E8C5F /* HomeView.swift in Sources */,
 				0C786D022A67117C002E8C5F /* Business.swift in Sources */,
+				0CF0E3302A827555008AA5A7 /* LocationDeniedView.swift in Sources */,
 				0CDB47022A6B5D9D0041BF36 /* BusinessSectionHeader.swift in Sources */,
 				0CE4EEF22A44AA7100629C89 /* CitysightApp.swift in Sources */,
 				0CCCBB342A78A6350060C17B /* BusinessDetails.swift in Sources */,
+				0CF0E32E2A825C09008AA5A7 /* OnbordingView.swift in Sources */,
 				0C786D042A67194C002E8C5F /* BusinessSearch.swift in Sources */,
+				0CF0E32A2A7D8A51008AA5A7 /* BusinessTitle.swift in Sources */,
 				0CDB46FE2A6B244D0041BF36 /* BusinessList.swift in Sources */,
 				0CF0E3242A7C1411008AA5A7 /* BusinessMap.swift in Sources */,
+				0CF0E3352A82BA96008AA5A7 /* LineDivider.swift in Sources */,
+				0CF0E3332A82B654008AA5A7 /* SportonLogo.swift in Sources */,
 				0CDB47042A6B61720041BF36 /* BusinessSection.swift in Sources */,
 				0CE4EF082A44ADB300629C89 /* ContentModel.swift in Sources */,
 				0C786D072A69315D002E8C5F /* Constants.swift in Sources */,
